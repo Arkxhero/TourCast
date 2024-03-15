@@ -1,12 +1,12 @@
 import './css/App.css';
 import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
-import Dashboard from './components/Dashboard';
-import Activities from './components/Activities';
-import useWindowDimensions from './components/WindowDimensions';
-import Mobile from './components/Mobile';
-import ExtremeWeather from './components/ExtremeWeather';
-import airquality from './components/airquality';
+import Header from './Header';
+import Dashboard from './Dashboard';
+import Activities from './Activities';
+import useWindowDimensions from './WindowDimensions';
+import Mobile from './Mobile';
+import ExtremeWeather from './ExtremeWeather';
+import airquality from './airquality';
  
 
 export const DayContext = React.createContext();
