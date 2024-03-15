@@ -159,6 +159,49 @@ header nav .extreme-weather-page {
 header nav .pollution-page {
   left: 15.4rem !important;
 }
+header fieldset {
+  width: 26.5rem;
+  flex-shrink: 0;
+  border-radius: 62.4375rem;
+  background: #444;
+  padding-left: 0.3rem;
+  display: flex;
+  box-sizing: border-box;
+}
+header fieldset input {
+  color: #EDF2F4;
+  font-size: 1.25rem;
+  padding: 0.6rem;
+  width: 100%;
+  height: 100%;
+  text-transform: capitalize;
+}
+header fieldset button {
+  display: flex;
+  align-items: center;
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+header fieldset .loading {
+  animation: load-animation 2s infinite;
+}
+@keyframes load-animation {
+  20% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+header fieldset button:hover {
+  opacity: 0.8;
+}
 header #title {
   display: flex;
   flex-direction: row;
@@ -527,6 +570,30 @@ header #space {
 #activities #weekly-activities #weekly-activity-content #activity-forecast .week-item .week-item-content .week-activity-icons .icon-holder {
   height: 32px;
 }
+/**************
+ * Mobile CSS *
+ **************/
+#mobile svg {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+}
+#mobile footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  border-radius: 32px 32px 0 0;
+  border: 1.4px solid rgba(255, 255, 255, 0.3);
+  background: radial-gradient(301.95% 171.74% at 50% 83.91%, rgba(17, 37, 72, 0.8) 0%, rgba(149, 164, 191, 0.6) 100%);
+  height: 115px;
+  flex-shrink: 0;
+}
+#mobile footer svg {
+  margin-bottom: 90px;
+  stroke-width: 6px;
+  stroke: #07FFFF;
+=======
 #activities #weekly-activities #weekly-activity-content #activity-forecast .week-item .week-item-content .week-activity-icons .tooltip {
   position: absolute;
   font-size: 1rem;
@@ -541,6 +608,7 @@ header #space {
 }
 #activities #weekly-activities #weekly-activity-content #activity-forecast .week-item .week-item-content .week-activity-icons:hover .tooltip {
   visibility: visible;
+
 }
 
 /*******************
@@ -548,10 +616,27 @@ header #space {
  *******************/
 #extreme-weather {
   margin-top: 6vh;
-  display: flex;
+
+  display: inline-flex;
+
   flex-direction: column;
   align-items: flex-start;
   gap: 3.1875rem;
+}
+
+#extreme-weather .extreme-nothing h3 {
+
+  color: #EDF2F4;
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-left: 5vw;
+}
+#extreme-weather #extreme-content {
+  display: inline-flex;
+  flex-direction: row;
 }
 #extreme-weather h1 {
   color: #EDF2F4;
@@ -560,13 +645,12 @@ header #space {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-#extreme-weather #extreme-content {
-  display: inline-flex;
-  flex-direction: row;
-}
+  }
+  
+
 #extreme-weather #extreme-details {
   display: inline-flex;
+
 }
 #extreme-weather .extreme-card {
   border-radius: 1.9375rem;
@@ -598,6 +682,30 @@ header #space {
   font-weight: 400;
   line-height: normal;
 }
+
+#extreme-weather #extreme-details {
+  border-radius: 1.9375rem;
+  border: 1px solid #d5181d;
+  background-color: #d5181d;
+  opacity: 80%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80vw;
+  height: 18rem;
+  margin-left: 2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+#extreme-weather #extreme-details h3 {
+  color: black;
+  opacity: 100%;
+  font-size: 1.8rem;
+  font-weight: 1000;
+
 
 /**************
  * Mobile CSS *
@@ -811,4 +919,4 @@ header #space {
 }
 #mobile fieldset button:hover {
   opacity: 0.8;
-}/*# sourceMappingURL=style.css.map */
+}

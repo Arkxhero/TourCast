@@ -628,10 +628,27 @@ header {
  *******************/
 #extreme-weather {
     margin-top: 6vh;
-    display: flex;
-    flex-direction:column;
+    display: inline-flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 3.1875rem;
+
+    .extreme-nothing {
+        h3 {
+            color: $text;
+            text-align: center;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            padding-left: 5vw;
+        }
+    }
+
+    #extreme-content {
+        display:inline-flex;
+        flex-direction: row;
+    }
 
     h1{
         color: $text;
@@ -640,15 +657,6 @@ header {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-    }
-
-    #extreme-content{
-        display: inline-flex;
-        flex-direction: row;
-    }
-
-    #extreme-details {
-        display: inline-flex;
     }
 
     .extreme-card{
@@ -683,6 +691,36 @@ header {
                 line-height: normal;
             }
         }
+    }
+    
+    #extreme-details {
+        border-radius: 1.9375rem;
+        border: 1px solid $extreme;
+        background-color: $extreme;
+        opacity: 80%;
+        // background: radial-gradient(133.48% 141.42% at 100% 100%, rgba(88, 103, 129, 0.80) 0%, rgba(141, 153, 174, 0.48) 100%);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 80vw;
+        height: 18rem;
+        margin-left: 2vw;
+        padding-left: 1vw; 
+        padding-right: 1vw;
+
+        h3 {
+            color: black;
+            opacity: 100%;
+            font-size: 1.8rem;
+            font-weight: 1000;
+        }
+    }
+}
+
+=======
     }   
 }
 /**************
